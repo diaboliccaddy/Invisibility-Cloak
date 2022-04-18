@@ -1,16 +1,12 @@
-
 import numpy as np
 import cv2
 import time
-
 cap=cv2.VideoCapture(0)
-
 time.sleep(3) 
 for i in range(30):
     retval,back=cap.read()
 back=np.flip(back,axis=1)
 cap=cv2.VideoCapture(0)  
-
 while (cap.isOpened()):  
     ret,img=cap.read()
     if ret:
